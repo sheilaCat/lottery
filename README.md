@@ -4,9 +4,18 @@
 
 # 说明
 
-一份重构稿demo。
-彩票。
+* 基于gulp的重构实现
+
+	* gulp-jshint
+	* gulp-less
+	* gulp-livereload
+	* gulp-uglify
+	* gulp-minify-css
+	
+* LESS
+
+* jQuery
 
 # 实现截图
 
-![img](http://thumbsnap.com/i/VO0mnbiD.png?1009)
+![img](http://thumbsnap.com/i/I9UJK8v8.png?1013)

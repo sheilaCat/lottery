@@ -1,27 +1,45 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    res.render('index', {
+        title: 'Express'
+    });
 });
 
-/* 请求开奖信息 */
 router.get('/open', function(req, res, next) {
-/*    res.json({success: 1});*/
-/*    res.json(
-        {
-            "lottery": [
-            {"openNum":"49","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"},
-            {"openNum":"50","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"},
-            {"openNum":"51","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"},
-            {"openNum":"52","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"},
-            {"openNum":"53","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"},
-            {"openNum":"54","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"},
-            {"openNum":"55","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"},
-            {"openNum":"56","num1":"01","num2":"03","num3":"05","num4":"07","num5":"10"}
-            ]
-        });*/
-    res.render('open', {title: 'open'});
+    res.json({
+        "winning": [{
+            "openNum": "49期",
+            "numbers": "01 03 05 07 10"
+        }, {
+            "openNum": "50期",
+            "numbers": "01 03 05 07 10"
+        }, {
+            "openNum": "51期",
+            "numbers": "01 03 05 07 10"
+        }, {
+            "openNum": "52期",
+            "numbers": "01 03 05 07 10"
+        }, {
+            "openNum": "53期",
+            "numbers": "01 03 05 07 10"
+        }, {
+            "openNum": "54期",
+            "numbers": "01 03 05 07 10"
+        }, {
+            "openNum": "55期",
+            "numbers": "01 03 05 07 10"
+        }, {
+            "openNum": "56期",
+            "numbers": "01 03 05 07 10"
+        }]
+    });
 })
+
+router.post('/submit', function(req, res, next) {
+    res.json({
+        success: 1
+    });
+});
+
 module.exports = router;

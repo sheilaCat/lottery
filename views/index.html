@@ -1,37 +1,28 @@
-
+<div id="bonusPot"></div>
 <div id="content">
-<div class="board">
-    <p class="left"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>距离50期截止<strong>09:37</strong></p>
-    <p class="right" id="pullDown">下拉历史开奖<span class="glyphicon glyphicon-arrow-down" arra-hidden="true"></span></p>
+    <div id="tips"><i class="iconfont">&#xe61a;</i>刷新成功</div>
+    <section id="timeRemain">
+        <p class="time"><i class="iconfont">&#xe629;</i>距离50期截止<strong>00:00:00</strong></p>
+        <p class="pullDown">下拉历史开奖<i class="iconfont">&#xe609;</i></p>
+    </section>
+    <section id="options">
+        <span>01</span>
+        <span>02</span>
+        <span>03</span>
+        <span>04</span>
+        <span>05</span>
+        <span>06</span>
+        <span>07</span>
+        <span>08</span>
+        <span>09</span>
+        <span>10</span>
+        <span>11</span>
+    </section>
 </div>
-<div id="circle-section">
-    <span class="circle active">01</span>
-    <span class="circle">02</span>
-    <span class="circle">03</span>
-    <span class="circle">04</span>
-    <span class="circle">05</span>
-    <span class="circle">06</span>
-    <span class="circle">07</span>
-    <span class="circle">08</span>
-    <span class="circle">09</span>
-    <span class="circle">10</span>
-    <span class="circle">11</span>
-    <div id="output"></div>
-</div>
-</div>
-<footer><p>猜中任意三个开奖号码，单注奖<span>26元</span>，再加奖<span>4元</span></p>
-<hr />
-<button type="button" class="btn btn-default btn-lg btn-left"><p><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></p>随机一注</button>
-<button type="button" class="btn btn-danger btn-lg btn-right" disabled="disabled">至少选择2个球</button>
+<footer>
+    <p>猜中任意三个开奖号码，单注奖<strong>26元</strong>，再加奖<strong>4元</strong></p>
+    <div id="btn-group">
+        <button type="button"><i class="iconfont">&#xe620;</i>随机一注</button>
+        <button type="submit" disabled="disabled">至少选择2个球</button>
+    </div>
 </footer>
-
-<script type="text/javascript">
-function handleTouchEvent(event) {
-    if(event.touches.length == 1){
-        if(event.type == 'touchmove'){
-            location.href='/open';
-        }
-    }
-}
-document.addEventListener("touchmove", handleTouchEvent, false);
-</script>
